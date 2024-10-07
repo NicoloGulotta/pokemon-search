@@ -1,0 +1,60 @@
+/* Stile generale */
+.poke-search-container {
+  background-color: #f0f0f0; /* Colore di sfondo generale */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Elementi specifici */
+.title-pages {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: #6daf4c;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.clean-button {
+  background-color: #af4c4c;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.poke-box {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Interattività */
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.search-button:hover {
+  background-color: #8e3e3e;
+}
+.clean-button:hover {
+  background-color: #3e8e41;
+}
