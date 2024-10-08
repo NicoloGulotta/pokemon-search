@@ -1,5 +1,8 @@
 import React from 'react';
-import './PokeSearch.css'
+import './PokeSearch.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faRightToBracket, faSquareXmark } from '@fortawesome/free-solid-svg-icons';
+
 export default function PokeSearch() {
     const [pokemonName, setPokemonName] = React.useState('');
     const [pokemonData, setPokemonData] = React.useState(null);
@@ -18,27 +21,46 @@ export default function PokeSearch() {
         }
     };
 
-    const hendleClean = async () => {
-        setPokemonName("");
+    const handleClean = async () => {
+        setPokemonName('');
         setPokemonData(null);
-    }
-    return (
-        <div className='poke-search-container'>
-            <h1 className='title-pages'>Cerca il tuo pokemon preferito!</h1>
-            <input type="text" placeholder="Inseriscipokemon" value={pokemonName} onChange={handleInputChange} />
-            <button className="search-button" onClick={handleSearch}>Cerca</button>
-            <button className="clean-button" onClick={hendleClean}>Pulisci</button>
+    };
 
-            <div className='poke-box'>
-                {pokemonData && (
-                    <div>
-                        <h4>{pokemonData.name}</h4>
-                        <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
-                        <img src={pokemonData.sprites.back_default} alt={pokemonData.name} />
-                        <h5>Type: {pokemonData.types.map(type => type.type.name).join(', ')}</h5>
-                    </div>
-                )}
+    return (
+        <>
+            <div className='search-box'>
+                <input
+                    type="text"
+                    placeholder="...."
+                    value={pokemonName}
+                    onChange={handleInputChange}
+                    className='search-input'
+                />
+                <button className="clean-button" onClick={handleClean}>
+                    <FontAwesomeIcon icon={faSquareXmark} />                </button>
+                <button className="search-button" onClick={handleSearch}>
+                    <FontAwesomeIcon icon={faSearch} />
+                </button>
+                <button className="catch-button" onClick={handleSearch}>
+                    <FontAwesomeIcon icon={faRightToBracket} />
+                </button>
             </div>
-        </div>
+            {pokemonData && (
+                <>
+                    <div className="img-box">
+                        <img
+                            src={pokemonData.sprites.front_default}
+                            alt={pokemonData.name}
+                            className='poke-img'
+                        />
+                    </div>
+                    <div className="text-box">
+                        <h5>Types: {pokemonData.types.map(type => type.type.name).join(', ')}</h5>
+                        <h5>Height: {pokemonData.height} m</h5>
+                        <h5>Weight: {pokemonData.weight} kg</h5>
+                    </div>
+                </>
+            )}
+        </>
     );
 }
