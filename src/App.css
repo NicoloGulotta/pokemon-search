@@ -4,13 +4,12 @@
   background-image: url("./dd2zouo-047f7b3f-b895-43ac-82a4-abb6ca12c52a.png");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-color: black;
 
-  /* Responsive adjustments */
+  /* Media query for smaller screens */
   @media (max-width: 768px) {
-    background-size: cover; /* Scale to fit without cropping */
+    background-size: contain;
     background-repeat: no-repeat;
   }
 }

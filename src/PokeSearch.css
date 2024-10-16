@@ -1,76 +1,38 @@
-.poke-search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
+.row {
+  width: 100%;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .search-box {
-  padding: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-
-.search-input {
-  width: 200px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.search-button,
-.clean-button,
-.catch-button {
-  width: 25px;
-  height: 30px;
-  background-color: #3f642c;
-  color: white;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.clean-button {
-  background-color: #af4c4c;
-}
-
-.catch-button {
-  background-color: #4f4caf;
-}
-
-.search-button:hover,
-.clean-button:hover,
-.catch-button:hover {
-  opacity: 0.8;
-}
-
 .pokemon-box {
   display: flex;
   align-items: center;
-  padding: 20px;
-  gap: 15px;
-  color: white;
-  justify-content: center; /* Center the image horizontally */
+  justify-content: center;
 }
-
-.img-box {
-}
-
-.poke-img {
-  width: 200px;
-  position: relative;
-  height: auto;
+.additional-info {
   display: flex;
+  color: white;
   align-items: center;
-  justify-content: flex-start;
-  right: 12%;
+  justify-content: center;
 }
-
-.text-box {
-  padding-right: 20px;
-  gap: 15px;
-  display: flex;
-  color: white;
+.Container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./dd2zouo-047f7b3f-b895-43ac-82a4-abb6ca12c52a.png");
+  background-size: cover;
+  background-position: center;
 }
