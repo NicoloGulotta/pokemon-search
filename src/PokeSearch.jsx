@@ -59,7 +59,7 @@ function PokeSearch() {
                             />
                         </div>
                     </div>
-                    <div className="">
+                    <div className="d-flex gap-3">
                         <button onClick={handleSearch} className="btn btn-primary" style={{ "padding": "5px" }}>
                             Cerca
                         </button>
@@ -77,9 +77,9 @@ function PokeSearch() {
                 />
 
                 {/* Third Column: Pokémon Information */}
-                <div className="col-md-4 additional-info d-flex align-items-center">
+                <div className="col-md-4 additional-info">
                     {pokemonData && (
-                        <div className="text-box">
+                        <div className="text-box ">
                             <h5>Tipo: {pokemonData.types.map(type => type.type.name).join(', ')}</h5>
                             <h5>Altezza: {pokemonData.height / 10} m</h5> {/* Altezza in metri */}
                             <h5>Peso: {pokemonData.weight / 10} kg</h5> {/* Peso in chilogrammi */}

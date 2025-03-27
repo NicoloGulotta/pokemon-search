@@ -36,3 +36,16 @@
   background-size: cover;
   background-position: center;
 }
+.text-box {
+  display: flex;
+  gap: 20%;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .text-box {
+    color: black;
+  }
+}
